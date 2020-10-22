@@ -9,9 +9,9 @@
 #include <stdio.h>
 #include <math.h> // cos, sin
 
-#include <GLFW/glfw3.h>
+#include "GLFW/glfw3.h"
 
-#include "../2dc.h"
+#include "2dc.h"
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
@@ -69,11 +69,11 @@ int main(int argc, const char * argv[]) {
     craete_program(
        &program,
        compile_shader(
-        read_file_content("./shaders/vertex_shader.vert"),
+        read_file_content("shaders/color_vertex_shader.vert"),
         GL_VERTEX_SHADER
        ),
        compile_shader(
-        read_file_content("./shaders/fragment_shader.frag"),
+        read_file_content("shaders/color_fragment_shader.frag"),
         GL_FRAGMENT_SHADER
        )
     );
@@ -135,7 +135,6 @@ int main(int argc, const char * argv[]) {
         
         // Render
         draw_traingles(sizeof(vertices) / sizeof(vertices[0]));
-        
         
         // Player Controlls
         if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)

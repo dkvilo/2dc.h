@@ -15,15 +15,16 @@ extern "C" {
 
 #include <stdlib.h>
 #include <strings.h>
-#include <GLFW/glfw3.h>
+#include "GLFW/glfw3.h"
 
 #ifdef __APPLE__
 #include <OpenGL/OpenGL.h>
 #endif
 
 #define STB_IMAGE_IMPLEMENTATION
-#include "./deps/stb_image.h"
-#include "./deps/linmath.h"
+
+#include "stb/stb_image.h"
+#include "linmath/linmath.h"
 
 #ifdef TWO_D_C_NO_STATIC
 #define TWO_D_C_FUNC extern inline
