@@ -1,10 +1,23 @@
 ##  2D Batch Renderer
 
+
 ```
-    2dc is a single header file 2D renderer which uses renderer optimization - 2D batching,
-    2dc is entirely written in pure C, based on Modern OpenGL API.
-    It comes with simple Entity system and 2d Vector helper functions. it also uses
-    stb_image.h and linmath.h as a dependency.
+  2dc is a 2D renderer which uses renderer optimization - 2D batching,
+  2dc is entirely written in pure C, based on Modern OpenGL API.
+  It comes with simple Entity system and 2d Vector helper functions. it also uses
+  stb_image.h and linmath.h as a dependency.
+```
+
+## Building
+
+```bash
+  # Install submodules 
+  $ git submodule update --init --recursive
+
+  # build glfw shared library
+  $ make glfw
+
+  $ make build # Build sandbox
 ```
 
 ### VBO & EBO Example
